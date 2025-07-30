@@ -6,7 +6,10 @@ Loyihada foydalanuvchini ro‘yxatdan o‘tkazish, email orqali tasdiqlash, mahs
 
 ---
 
-## 🌐 Demo (Agar mavjud bo‘lsa demo linkini qo‘shing)
+## 🌐 Live Demo
+
+🖥 Ishlayotgan sayt:  
+🔗 https://watchsellservice.pythonanywhere.com/
 
 ---
 
@@ -18,6 +21,8 @@ Loyihada foydalanuvchini ro‘yxatdan o‘tkazish, email orqali tasdiqlash, mahs
 - **JavaScript (asosiy)**
 - **Django Email Backend (SMTP)**
 - **SQLite (default)**
+- **PythonAnywhere** (Deploy uchun)
+- **Multi-language (uz/ru/en)**
 
 ---
 
@@ -27,13 +32,34 @@ Loyihada foydalanuvchini ro‘yxatdan o‘tkazish, email orqali tasdiqlash, mahs
 > Xususan:
 > 
 > ✅ **Ro‘yxatdan o‘tish va login sahifalarini** sozlash  
-> ✅ **Parolni unutgan holatda tiklash tizimini** yaratish:  
-> - Emailga 6 xonali tasdiqlash kodi yuboriladi  
-> - Foydalanuvchi shu kodni kiritadi  
-> - Kod mos kelsa, yangi parol kiritish sahifasiga o‘tadi  
-> - Aks holda xato xabari qaytariladi  
+> ✅ **Parolni unutgan holatda tiklash tizimini** yaratish  
+> ✅ **Emailga tasdiqlash kodi yuborish va real gmailni tekshirish**
 > 
-> Bu orqali **Django'da email yuborish** va **formani to‘ldirib admin panelga saqlash** jarayonlarini chuqur o‘rgandim.
+> Bu orqali men quyidagilarni chuqur o‘rgandim:
+> - Django'da email yuborish
+> - Foydalanuvchi ma’lumotlarini forma orqali qabul qilish va tekshirish
+> - Multi-language frontend (Xush kelibsiz xabari 3 tilda)
+> - Real email bo‘lmagan holatda ro‘yxatdan o‘tishni bloklash
+
+---
+
+## 🌍 Tilni tanlash funksiyasi
+
+Saytga kirganingizda foydalanuvchiga avtomatik ravishda 3 tilda (O‘zbek, Rus, Ingliz) **"Xush kelibsiz"** xabari chiqariladi:
+
+- 🇺🇿 Uzbek: *Xush kelibsiz!*  
+- 🇷🇺 Русский: *Добро пожаловать!*  
+- 🇬🇧 English: *Welcome!*
+
+> Bu foydalanuvchilarning tilini aniqlab, mos interfeysni ko‘rsatadi. Django i18n funksiyasi asosida.
+
+---
+
+## 📧 Real Gmail tekshiruvi
+
+- Ro‘yxatdan o‘tish vaqtida foydalanuvchi **gmail manzilini kiritishi shart**
+- Django email backend orqali **real Gmail manziliga** tasdiqlovchi 6 xonali kod yuboriladi
+- Gmail mavjud bo‘lmasa yoki noto‘g‘ri kiritilsa — ro‘yxatdan o‘tish ruxsat etilmaydi
 
 ---
 
@@ -53,58 +79,29 @@ Loyihada foydalanuvchini ro‘yxatdan o‘tkazish, email orqali tasdiqlash, mahs
 
 ## 🚀 Ishga tushirish
 
-### 1. Repozitoriyani klon qiling
-
 ```bash
 git clone https://github.com/Abdurahmon17/watch_sell.git
 cd watch_sell
-````
-
-### 2. Virtual muhit yaratish va faollashtirish
-
-```bash
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
-```
-
-### 3. Kerakli kutubxonalarni o‘rnatish
-
-```bash
 pip install -r requirements.txt
-```
-
-### 4. Migratsiyalarni bajaring
-
-```bash
 python manage.py makemigrations
 python manage.py migrate
-```
-
-### 5. Superuser yarating
-
-```bash
 python manage.py createsuperuser
-```
-
-### 6. Serverni ishga tushiring
-
-```bash
 python manage.py runserver
-```
+````
 
 🔗 Saytga kiring: `http://127.0.0.1:8000/`
 
 ---
 
-## ✉️ Email orqali parol tiklash
-
-Foydalanuvchi parolni unutgan bo‘lsa:
+## ✉️ Parolni unutgan foydalanuvchi
 
 1. "Forgot password" tugmasini bosadi
 2. Emailga 6 xonali tasdiqlash kodi yuboriladi
 3. Foydalanuvchi shu kodni kiritadi
 4. Agar kod to‘g‘ri bo‘lsa — yangi parol kiritish sahifasiga o‘tadi
-5. Admin panelga ham form ma’lumotlari saqlanadi
+5. Kod noto‘g‘ri bo‘lsa — xato xabari chiqadi
 
 ---
 
@@ -139,15 +136,17 @@ Ushbu loyiha hozircha litsenziyasiz. Agar kerak bo‘lsa MIT litsenziya qo‘shi
 
 ---
 
-✅ Bu loyiha orqali foydalanuvchi autentifikatsiyasi va email-verifikatsiya bilan ishlashni chuqur o‘rgandim.
+✅ Bu loyiha orqali foydalanuvchi autentifikatsiyasi, email-verifikatsiya, parol tiklash, va ko‘p tilli interfeysni chuqur o‘rgandim.
 
 ```
 
 ---
 
-Agar xohlasang:
-- Bu faylni `.md` formatida yuklab beraman
-- Keyingi loyiha `kindergarden_org` uchun ham `README` yozib beraman
+✅ Endi bu `README.md` faylni:
+- GitHub loyihangga yukla
+- Yoki xohlasang `.md` fayl holida yuklab beray
 
-📌 Endi nima qilamiz? Faylni yuklab beraymi yoki boshqa loyiha uchun yozamizmi?
+---
+
+Keyingisi: `kindergarden_org` loyihangga ham `README.md` yozamizmi? Yoki bu faylni yuklab olaymi?
 ```
